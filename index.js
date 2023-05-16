@@ -8,6 +8,9 @@ import mongoose, { mongo } from 'mongoose';
 // routes
 import category from './routers/category.route.js';
 import product from './routers/product.route.js';
+import card from './routers/card.route.js';
+import gift from './routers/gift.route.js';
+import plant from './routers/plant.route.js';
 
 const app = express()
 const PORT = process.env.port || 5000
@@ -21,6 +24,9 @@ app.use(cors())
 // use routes
 app.use('/category', category)
 app.use('/product', product)
+app.use('/card', card)
+app.use('/gift', gift)
+app.use('/plant', plant)
 
 mongoose.set('strictQuery', false)
 mongoose
