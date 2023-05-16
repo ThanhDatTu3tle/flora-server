@@ -6,11 +6,11 @@ import cors from 'cors';
 import mongoose, { mongo } from 'mongoose';
 
 // routes
-import category from './routers/category.route.js';
 import product from './routers/product.route.js';
 import card from './routers/card.route.js';
 import gift from './routers/gift.route.js';
 import plant from './routers/plant.route.js';
+import popular from './routers/popular.route.js';
 
 const app = express()
 const PORT = process.env.port || 5000
@@ -22,11 +22,11 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '30mb' }))
 app.use(cors())
 
 // use routes
-app.use('/category', category)
 app.use('/product', product)
 app.use('/card', card)
 app.use('/gift', gift)
 app.use('/plant', plant)
+app.use('/popular', popular)
 
 mongoose.set('strictQuery', false)
 mongoose

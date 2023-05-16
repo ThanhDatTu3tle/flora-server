@@ -24,4 +24,4 @@ const schema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-export const GiftModel = mongoose.model('GiftModel', schema);
+export const PopularModel = mongoose.model('Popular', schema);

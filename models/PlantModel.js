@@ -21,10 +21,6 @@ const schema = new mongoose.Schema({
     favorite: {
         type: Boolean,
         default: false,
-    },
-    category: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Category"
     }
 }, { timestamps: true })
 
